@@ -1,0 +1,115 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #cce0ff, #ffffff);
+    margin: 0;
+    padding: 0;
+}
+
+.page-table {
+    width: 90%;
+    margin: 30px auto;
+    border: 4px solid #0057b7;
+    background-color: #e6f0ff;
+    border-collapse: collapse;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+
+.nav-table { width: 100%; border-collapse: collapse; }
+.nav-table td {
+    padding: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    background-color: #0057b7;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.nav-table td:hover { 
+    background-color: #ffd700;
+    color: #0057b7;
+    transform: scale(1.1);
+	
+}
+.nav-table td a { text-decoration: none; color: white; display: block; }
+
+.main-content { 
+    background-color: #99ccff; 
+    padding: 30px; 
+}
+.main-content table { width: 100%; border-collapse: collapse; }
+
+.photo img {
+    width: 280px;
+    height: 350px;
+    border: 6px solid white;
+    box-shadow: 0 0 20px rgba(0,0,0,0.4);
+    border-radius: 15px;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+.photo img:hover {
+    transform: scale(1.05) rotate(1deg);
+    box-shadow: 0 0 30px rgba(0,0,0,0.6);
+}
+
+.personal-info, .info-text, .text {
+    font-size: 19px;
+    line-height: 1.8;
+    padding: 20px;
+    color: #0057b7;
+    transition: transform 0.3s ease;
+}
+.personal-info b, .info-text b, .text b { color: #ffd700; }
+.personal-info i, .info-text i, .text i { color: #ffd700; margin-right: 8px; }
+
+hr { border: 2px solid #0057b7; margin: 30px 0; }
+
+.card {
+    background-color: #cce6ff;
+    color: #0057b7;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    margin-bottom: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+}
+.card b { font-size: 22px; color: #000000; }
+.card i { color: #ffd700; margin-right: 10px; }
+.card > b {
+    color: #000000;
+    font-size: 24px;
+}
+
+.main-content i {
+    color: #ffd700;
+    margin-right: 8px;
+}
+.main-content b {
+    color: #ffd700;
+}
+.main-content .card > b {
+    color: #000000;
+    font-size: 24px;
+}
+
+.info-text b {
+    color: #ffd700;
+}
+
+h1, .card b {
+    color: #000000;
+}
+
+@media screen and (max-width:900px) {
+    .main-content table tr { display:block; }
+    .photo, .personal-info, .info-text, .text, .card { 
+        width:100% !important; 
+        text-align:center; 
+        padding:10px 0; 
+    }
+}

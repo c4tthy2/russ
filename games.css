@@ -1,0 +1,147 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #9fd0ff;
+    margin: 0;
+    padding: 0;
+    color: #003f88;
+}
+
+.page-table {
+    width: 90%;
+    margin: 30px auto;
+    border: 3px solid #2f7edb;
+    background-color: #cfe8ff;
+    border-collapse: collapse;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+.nav-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #005bbb;
+}
+
+.nav-table td {
+    padding: 16px;
+    font-size: 19px;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.nav-table td a {
+    text-decoration: none;
+    color: white;
+    display: block;
+}
+
+.nav-table td:hover {
+    background-color: #ffd700;
+    color: #0057b7;
+	transform: scale(1.1);
+}
+
+.nav-table td:hover a {
+    color: #0057b7;
+}
+
+
+.nav-table td.active a {
+    color: #003f88;
+    font-weight: bold;
+}
+
+
+
+.main-content {
+    background-color: #9fd0ff;
+    padding: 30px;
+}
+
+.box {
+    background-color: #e6f3ff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.12);
+}
+
+h2 {
+    color: #003f88;
+    margin-bottom: 15px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    line-height: 1.8;
+}
+
+.food-item,
+.game-item {
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.food-item:hover,
+.game-item:hover {
+    background-color: #cfe8ff;
+}
+
+.food-item.active,
+.game-item.active {
+    background-color: #9fd0ff;
+    font-weight: bold;
+}
+
+.desc {
+    display: none;
+    padding: 12px;
+    border-radius: 10px;
+    background-color: #cfe8ff;
+    font-weight: bold;
+} 
+.game-item {
+    padding: 10px 14px;
+    border-radius: 10px;
+    font-size: 17px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background 0.2s, font-weight 0.2s;
+}
+
+.game-item:hover {
+    background: #d7e9ff;
+}
+
+.game-item.active {
+    background: #bcd9ff;
+    font-weight: bold;
+}
+
+
+
+
+footer {
+    background-color: #005bbb;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-weight: bold;
+}
+
+@media screen and (max-width:900px) {
+    .main-content table tr {
+        display: block;
+    }
+    .box {
+        margin-bottom: 20px;
+    }
+}

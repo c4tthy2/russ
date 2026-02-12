@@ -1,0 +1,112 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Favorite Games</title>
+
+<link rel="stylesheet" href="games.css">
+</head>
+
+<body>
+
+<table class="page-table">
+
+<tr>
+<td colspan="2">
+<table class="nav-table">
+<tr>
+<td><a href="home.html">HOME</a></td>
+<td><a href="info.html">INFO</a></td>
+<td class="active"><a href="games.html">GAMES</a></td>
+<td><a href="hobby.html">HOBBY</a></td>
+</tr>
+</table>
+</td>
+</tr>
+
+ <tr>
+<td colspan="2" class="main-content">
+<table width="100%" cellspacing="25">
+<tr>
+
+<td width="45%" valign="top">
+<div class="emoji-left">🕹️⭐</div>
+
+<div class="box">
+<h2>🎮 Favorite Games</h2>
+<ul>
+<li class="game-item active" onclick="showGame('cod', this)">🕹️ Call of Duty</li>
+<li class="game-item" onclick="showGame('ml', this)">⚔️ Mobile Legends</li>
+<li class="game-item" onclick="showGame('genshin', this)">✨ Genshin Impact</li>
+<li class="game-item" onclick="showGame('valo', this)">🎯 Valorant</li>
+<li class="game-item" onclick="showGame('minecraft', this)">🧱 Minecraft</li>
+<li class="game-item" onclick="showGame('roblox', this)">🎲 Roblox</li>
+</ul>
+
+</div>
+</td>
+
+ <td width="55%" valign="top">
+
+<div class="emoji-sticker">🎮✨</div>
+
+<div class="box">
+<h2>📖 Game Description</h2>
+
+<div id="cod" class="desc" style="display:block;">
+<b>Call of Duty</b> – A fast-paced shooting game with intense action and realistic combat.
+</div>
+
+<div id="ml" class="desc">
+<b>Mobile Legends</b> – A 5v5 MOBA game that focuses on teamwork and strategy.
+</div>
+
+<div id="genshin" class="desc">
+<b>Genshin Impact</b> – An open-world RPG with beautiful visuals and elemental combat.
+</div>
+
+<div id="valo" class="desc">
+<b>Valorant</b> – A tactical shooter that mixes gunplay and character abilities.
+</div>
+
+<div id="minecraft" class="desc">
+<b>Minecraft</b> – A sandbox game where you can build, explore, and survive.
+</div>
+
+<div id="roblox" class="desc">
+<b>Roblox</b> – A platform that lets players create and play many different games.
+</div>
+
+</div>
+</td>
+
+
+
+</tr>
+</table>
+</td>
+</tr>
+
+<tr>
+<td colspan="2">
+<footer>
+© 2026 Russel D. Jamora | Portfolio
+</footer>
+</td>
+</tr>
+
+</table>
+
+<script>
+function showGame(id, element) {
+    document.querySelectorAll('.desc').forEach(d => d.style.display = "none");
+    document.getElementById(id).style.display = "block";
+
+    document.querySelectorAll('.game-item').forEach(g => g.classList.remove('active'));
+    element.classList.add('active');
+}
+</script>
+
+</body>
+</html>
