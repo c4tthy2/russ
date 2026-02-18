@@ -42,24 +42,32 @@ body {
 .nav-table td:hover {
     background-color: #ffd700;
     color: #0057b7;
-	transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 .nav-table td:hover a {
     color: #0057b7;
 }
 
-
 .nav-table td.active a {
     color: #003f88;
     font-weight: bold;
 }
 
-
-
 .main-content {
     background-color: #9fd0ff;
     padding: 30px;
+}
+
+
+.main-content table {
+    width: 100%;
+    table-layout: fixed;
+}
+
+.main-content td {
+    vertical-align: top;
+    padding: 15px;
 }
 
 .box {
@@ -77,35 +85,10 @@ h2 {
 ul {
     list-style: none;
     padding: 0;
+    margin: 0;
     line-height: 1.8;
 }
 
-.food-item,
-.game-item {
-    padding: 10px;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background 0.3s;
-}
-
-.food-item:hover,
-.game-item:hover {
-    background-color: #cfe8ff;
-}
-
-.food-item.active,
-.game-item.active {
-    background-color: #9fd0ff;
-    font-weight: bold;
-}
-
-.desc {
-    display: none;
-    padding: 12px;
-    border-radius: 10px;
-    background-color: #cfe8ff;
-    font-weight: bold;
-} 
 .game-item {
     padding: 10px 14px;
     border-radius: 10px;
@@ -126,8 +109,15 @@ ul {
     font-weight: bold;
 }
 
-
-
+.desc {
+    display: none;
+    padding: 12px;
+    border-radius: 10px;
+    background-color: #cfe8ff;
+    font-weight: bold;
+	font-size: 18px;
+	line-height:1.6;
+}
 
 footer {
     background-color: #005bbb;
@@ -136,11 +126,41 @@ footer {
     padding: 15px;
     font-weight: bold;
 }
+.games-layout {
+    display: flex;
+    gap: 25px;
+}
+
+.left-side {
+    width: 45%;
+}
+
+.right-side {
+    width: 55%;
+}
 
 @media screen and (max-width:900px) {
-    .main-content table tr {
-        display: block;
+    .games-layout {
+        flex-direction: column;
     }
+
+    .left-side,
+    .right-side {
+        width: 100%;
+    }
+}
+
+
+
+@media screen and (max-width: 900px) {
+    .main-content table,
+    .main-content tbody,
+    .main-content tr,
+    .main-content td {
+        display: block;
+        width: 100% !important;
+    }
+
     .box {
         margin-bottom: 20px;
     }
